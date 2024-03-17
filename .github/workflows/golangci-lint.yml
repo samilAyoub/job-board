@@ -1,0 +1,30 @@
+name: golangci-lint
+on:
+  push:
+    tags:
+      - v*
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '**/*.go'
+permissions:
+  contents: read
+jobs:
+  golangci:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run golangci-lint
+        uses: golangci/golangci-lint-action@v2
+        with:
+          version: v1.29
+          args: --issues-exit-code=0 # Optional: golangci-lint command line arguments.
+          only-new-issues: true # Optional: show only new issues if it's a pull request.
+          skip-go-installation: true # Optional: use pre-installed Go.
+          skip-pkg-cache: true # Optional: don't cache or restore ~/go/pkg.
+          skip-build-cache: true # Optional: don't cache or restore ~/.cache/go-build.
+

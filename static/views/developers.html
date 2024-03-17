@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+	<meta name="yandex-verification" content="96b3163b8551fd06">
+	<title>{{ .SiteJobCategory }} {{ if .TagFilter }}{{.TagFilter}} {{ end }}Developers for Hire{{ if .LocationFilter }} in {{ .LocationFilter }}{{ end }} in {{ .MonthAndYear}} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} - {{ .SiteName }}</title>
+        <link href="/x/s/m/{{ .SiteLogoImageID }}?w=50&h=50" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="title" content="{{ .SiteJobCategory }} {{ if .TagFilter }}{{.TagFilter}} {{ end }}Developers for Hire{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }} in {{ .MonthAndYear }} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} - {{ .SiteName }}">
+	<meta name="keywords" content="{{ .SiteJobCategory }} developers, {{ .SiteJobCategory }} developers for hire{{ if .TagFilter }}, {{ .SiteJobCategory }} {{ .TagFilter }} developers{{ end }}{{ if .LocationFilter }}, {{ .SiteJobCategory }} developers in {{ .LocationFilter }}{{ end }}">
+	<meta name="description" content="{{ .SiteJobCategory }} {{ if .TagFilter }}{{.TagFilter}} {{ end }}Developers for Hire{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Region }}, {{ .Region }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}{{ end }} in {{ .MonthAndYear }} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} - {{ .SiteName }}">
+    <meta itemprop="name" content="{{ .SiteJobCategory }} {{ if .TagFilter }}{{.TagFilter}} {{ end }}Developers for Hire{{ if .LocationFilter }} in {{ .LocationFilter }}{{ end }} in {{ .MonthAndYear }} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} - {{ .SiteName }}">
+    <meta itemprop="description" content="{{ .SiteJobCategory }} {{ if .TagFilter }}{{.TagFilter}} {{ end }}Developers for Hire{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Region }}, {{ .Region }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}{{ end }} in {{ .MonthAndYear }} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} - {{ .SiteName }}">
+    <meta itemprop="image" content="https://{{ .SiteHost }}/x/s/m/{{ .SiteLogoImageID }}">
+	<meta property="og:url" content="https://{{ .SiteHost }}">
+        <meta property="og:type" content="website">
+	<meta property="og:title" content="{{ .SiteJobCategory }} {{ if .TagFilter }}{{.TagFilter}} {{ end }}Developers for Hire{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }} in {{ .MonthAndYear}} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} - {{ .SiteName }}">
+	<meta property="og:description" content="{{ .SiteJobCategory }} {{ if .TagFilter }}{{.TagFilter}} {{ end }}Developers for Hire{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Region }}, {{ .Region }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}{{ end }} in {{ .MonthAndYear}} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} - {{ .SiteName }}">
+	<meta property="og:image" content="https://{{ .SiteHost }}/x/s/m/{{ .SiteLogoImageID }}">
+        <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{{ .SiteJobCategory }} {{ if .TagFilter }}{{.TagFilter}} {{ end }}Developers for Hire{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }} in {{ .MonthAndYear }} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} - {{ .SiteName }}">
+        <meta name="twitter:description" content="">
+	<link rel="canonical" href="https://{{ .SiteHost }}/{{ .SiteJobCategoryURLEncoded }}-{{ if .TagFilter }}{{ .TagFilterURLEncoded }}-{{ end }}Developers{{ if .LocationFilter }}-In-{{ .LocationURLEncoded }}{{ end }}">
+	<meta name="twitter:image" content="https://{{ .SiteHost }}/x/s/m/{{ .SiteLogoImageID }}">
+	<meta name="twitter:site" content="@{{ .SiteTwitter }}">
+    <meta name="google-site-verification" content="CsoJdYDgMeIeUO0ylZtiDUb4-VZvb2tCpLTkq3GglVo">
+    <meta name="msvalidate.01" content="E75D7CB7D078DD8E9C2FBA8C285CD656">
+    <style>
+body{background:#ffffff;}
+    input,textarea,select,button,option,html,body{font-family:Helvetica;font-size:18px;font-stretch:normal;font-style:normal;font-weight:400;line-height:29.7px}input,textarea,select,button,option,html,body{font-family:Helvetica;font-size:18px;font-stretch:normal;font-style:normal;font-weight:400;line-height:29.7px}th{font-weight:600}td,th{border-bottom:1.08px solid #595959;overflow:auto;padding:14.85px 18px;text-align:left;vertical-align:top}thead th{border-bottom-width:2.16px;padding-bottom:6.3px}table{display:table;overflow-x:auto}input,textarea,select,button,option,html,body{font-family:Helvetica;font-size:18px;font-stretch:normal;font-style:normal;font-weight:400;line-height:29.7px}fieldset{display:flex;flex-direction:row;flex-wrap:wrap}fieldset legend{margin:18px 0}input,textarea,select,button{border-radius:3.6px;display:inline-block;padding:9.9px}input+label,input+input[type="checkbox"],input+input[type="radio"],textarea+label,textarea+input[type="checkbox"],textarea+input[type="radio"],select+label,select+input[type="checkbox"],select+input[type="radio"],button+label,button+input[type="checkbox"],button+input[type="radio"]{page-break-before:always}input,select,label{margin-right:3.6px}textarea{min-height:90px;min-width:360px}label{display:inline-block;margin-bottom:12.6px}label+*{page-break-before:always}label>input{margin-bottom:0}input[type="submit"],input[type="reset"],button{background:#f2f2f2;color:#191919;cursor:pointer;display:inline;margin-bottom:18px;margin-right:7.2px;padding:6.525px 23.4px;text-align:center}input[type="submit"]:hover,input[type="reset"]:hover,button:hover{background:#d9d9d9;color:#000}input[type="submit"][disabled],input[type="reset"][disabled],button[disabled]{background:#e6e5e5;color:#403f3f;cursor:not-allowed}input[type="submit"],button[type="submit"]{background:{{ .PrimaryColor }};color:#fff}input[type="submit"]:hover,button[type="submit"]:hover{background:{{ .SecondaryColor }};color:#ffffff}input,select,textarea{margin-bottom:18px}input[type="text"],input[type="password"],input[type="email"],input[type="url"],input[type="phone"],input[type="tel"],input[type="number"],input[type="datetime"],input[type="date"],input[type="month"],input[type="week"],input[type="color"],input[type="time"],input[type="search"],input[type="range"],input[type="file"],input[type="datetime-local"],select,textarea{border:1px solid #595959;padding:5.4px 6.3px}input[type="checkbox"],input[type="radio"]{flex-grow:0;height:29.7px;margin-left:0;margin-right:9px;vertical-align:middle}input[type="checkbox"]+label,input[type="radio"]+label{page-break-before:avoid}select[multiple]{min-width:270px}input,textarea,select,button,option,html,body{font-family:Helvetica;font-size:18px;font-stretch:normal;font-style:normal;font-weight:400;line-height:29.7px}pre,code,kbd,samp,var,output{font-family:Menlo,Monaco,Consolas,"Courier New",monospace;font-size:14.4px}pre{border-left:1.8px solid #59c072;line-height:25.2px;overflow:auto;padding-left:18px}pre code{background:none;border:0;line-height:29.7px;padding:0}code,kbd{background:#daf1e0;border-radius:3.6px;color:#2a6f3b;display:inline-block;line-height:18px;padding:3.6px 6.3px 2.7px}kbd{background:#2a6f3b;color:#fff}mark{background:#ffc;padding:0 3.6px}input,textarea,select,button,option,html,body{font-family:Helvetica;font-size:18px;font-stretch:normal;font-style:normal;font-weight:400;line-height:29.7px}h1,h2,h3,h4,h5,h6{color:#000;margin-bottom:18px}h1{font-size:36px;font-weight:500;line-height:41.4px;margin-top:72px}h2{font-size:25.2px;font-weight:400;line-height:30.6px;margin-top:54px}h3{font-size:21.6px;line-height:27px;margin-top:36px}h4{font-size:18px;line-height:23.4px;margin-top:18px}h5{font-size:14.4px;font-weight:bold;line-height:21.6px;text-transform:uppercase}h6{color:#595959;font-size:14.4px;font-weight:bold;line-height:18px;text-transform:uppercase}input,textarea,select,button,option,html,body{font-family:Helvetica;font-size:18px;font-stretch:normal;font-style:normal;font-weight:400;line-height:29.7px}a{color:{{ .PrimaryColor }};text-decoration:none}a:hover{text-decoration:underline}hr{border-bottom:1px solid #595959}figcaption,small{font-size:15.3px}figcaption{color:#595959}var,em,i{font-style:italic}dt,strong,b{font-weight:600}del,s{text-decoration:line-through}ins,u{text-decoration:underline}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}*{border:0;border-collapse:separate;border-spacing:0;box-sizing:border-box;margin:0;max-width:100%;outline:0;padding:0;vertical-align:baseline}html,body{width:100%}html{height:100%}body{color:#1a1919;}p,ul,ol,dl,blockquote,hr,pre,table,form,fieldset,figure,address{margin-bottom:29.7px}section{margin-left:auto;margin-right:auto;width:780px}article,header,footer{padding:43.2px}article{word-wrap: break-word;background:#fff;border:1px solid #d9d9d9;border-radius:7.2px}nav{text-align:center}nav ul{list-style:none;margin-left:0;text-align:center}nav ul li{display:inline-block;margin-left:9px;margin-right:9px;vertical-align:middle}nav ul li:last-child{margin-right:0}ol,ul{margin-left:31.5px}li dl,li ol,li ul{margin-bottom:0}dl{display:inline-block}dt{padding:0 18px}dd{padding:0 18px 4.5px}dd:last-of-type{border-bottom:1.08px solid #595959}dd+dt{border-top:1.08px solid #595959;padding-top:9px}blockquote{border-left:2.16px solid #595959;padding:4.5px 18px 4.5px 15.84px}blockquote footer{color:#595959;font-size:13.5px;margin:0}blockquote p{margin-bottom:0}img{height:auto;margin:0 auto}figure img{display:block}/*# sourceMappingURL=tacit-css-1.3.2.min.css.map */
+    footer{padding:10px;width:780px;margin:auto;}.subnav{width: 100%;text-align: left;float: left;font-size: 12pt;}.subnav ul {text-align:left;}.subnav ul li {width:90%;}
+    .mobile-only { display: none; }
+    #search-location,
+    #search-tag{
+        margin-bottom:1px;
+        border:1px solid #d9d9d9;
+        width:100%;
+    }
+    #search-location-container,
+    #search-tag-container {
+        position:relative;
+    }
+    .search-suggestions {
+        z-index:1;
+        width:100%;
+        border:1px solid #d9d9d9;
+        position:absolute;
+        background:#fff;
+        border-radius: 0 0 3.6px 3.6px;
+        border-top: 0px;
+        margin-top: -2px;
+    }
+    .search-option {
+        padding:5px 10px;
+    }
+    .search-option:hover {
+        background:#d9d9d9;
+        cursor:pointer;
+    }
+    .field-group {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+    .checkbox-list-item {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    .checkbox-list-item input[type="checkbox"] {
+        height: initial;
+        margin-bottom: 0;
+    }
+    .checkbox-list-item label {
+        margin: 0;
+    }
+    #search-btn {
+        width:25%;
+        padding:5.53px 10px;
+        border:1px solid {{ .PrimaryColor }};
+    }
+    #post-btn {
+        width:auto;
+        float:right;
+        margin-right:0;
+        padding-right:25px;
+        padding-left: 25px;
+    }
+    @media only screen and (max-width:768px){
+        .subnav{width: 100%;}
+        #search-location-container,#search-tag-container{width:100%;}
+        #search-btn{width:100%;margin-right:0;margin-bottom:20px;float:initial;}
+        .mobile-only { display: block; }
+        .menu-header a { font-size: 9pt !important; }
+        .subnav ul li {width: 100%;}
+        .main-title { width: 100% !important; }
+        #post-btn-mobile { width:100%; }
+        #post-btn {display:none;}
+        #search-location, #search-tag { margin-bottom: 10px; }
+    }
+    .line-item {background:#fff;padding:20px;margin:5px auto;}input{-webkit-appearance: none;-moz-appearance: none;appearance: none;}
+    .job-desc {float:left;padding:0px 0px 0px 0px;font-size:12pt;display:none;}.job-desc>h3{margin-top:10px;}.job-icon{float: left; width: 120px; border-radius: 120px; margin-right: 10px;border: 1px solid #ccc;}
+    a:hover{cursor:pointer;}.main-title{font-weight: bold;margin: 0 0 auto;width:80%;color:{{ .PrimaryColor }};}
+    .line-item-sponsored-1 {border-radius: 8px;}@media only screen and (max-width: 768px) {.email-subscribe-item{margin-top:15px;margin-bottom: 0;}}
+    .apply-box {display: none;z-index: 2;width: 50%; height: auto;position: fixed;margin: 5% auto; top: 40px; left: 0; right: 0;background: #fff;}@media only screen and (max-width: 768px) {.apply-box{width: 90%;}}
+    .overlay-effect {display: none;width: 100%; height: 100%; position: fixed; top: 0; left: 0;background: rgba(0, 0, 0,0.5);z-index: 1}.upload-file-label:hover{cursor: pointer;}
+    .clearfix::after {content: "";clear: both;display: table;}input[type="checkbox"]{-webkit-appearance: checkbox;-moz-appearance: checkbox;appearance: checkbox;}
+    .apply-link {font-size: 18px;font-weight: 400;line-height: 29.7px;border-radius: 3.6px;background: {{ .PrimaryColor }};color: #fff;cursor: pointer;display: inline;margin-bottom: 18px;margin-right: 7.2px;padding: 6.525px 23.4px;text-align: center;}.apply-link:hover {text-decoration:none;background:{{ .SecondaryColor }};color:#ffffff;}
+    .menu-header{text-align:left;width: 100%;margin:20px auto;border-bottom:1px solid #d9d9d9;}.menu-header a {white-space:pre;color: black;font-size: 12pt;font-weight: bold;padding-right: 5px;}header{padding:0 10px;width:780px;margin:auto;}
+.container{display: grid;grid-template-columns: 375px 375px;column-gap: 10px;row-gap: 10px;}.container .line-item {align-self: auto;}.send-message {float:left; margin-top:15px;}
+  @media only screen and (max-width: 768px) {.container{grid-template-columns: 100%;}.line-item{margin:10px 0;}}
+  .overflow{display: -webkit-box;max-width: 250px;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;}.overflow p {margin-bottom:0;}.hover-pointer{cursor:pointer;}
+  .hover-pointer{cursor: pointer;}
+    </style>
+    {{ template "newsletter-banner-css" . }}
+    
+    {{ template "google-analytics" }}
+  </head>
+  <body>
+	{{ template "newsletter-banner-html" . }}
+	{{ template "header-html" . }}    
+  <section style="padding: 0 10px;">
+    {{ if not .LoggedUser }}<input type="submit" value="Join the Community" id="post-btn" onclick="window.location.href='/Join-{{ .SiteJobCategoryURLEncoded }}-Community';">{{ end }}
+	<h1 class="main-title">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Developers {{ if .LocationFilter }}in {{ .LocationFilter }}{{ end }} </h1><br>
+	<h2 style="font-size:12pt;font-weight:100;margin-top:20px">Browse, view and reach <b>{{ if .TotalDevelopersCount }}{{ .TotalDevelopersCount }}{{ end }} {{ .SiteJobCategory }}{{ if .TagFilter }} {{ .TagFilter }}{{ end }} developers</b> for hire {{ if .LocationFilter }} in <b>{{ .LocationFilter }}{{ if .Region }}, {{ .Region }}{{ end }}{{ if .Country }}, {{ .Country }}{{ end }}</b>{{ end }} in {{ .MonthAndYear }}. Search developers experienced in <b>{{ .TopDeveloperSkills }}</b>. {{ .SiteJobCategory }} developers like <b>{{ .TopDeveloperNames }}</b> and many more are available for hire on {{ .SiteName }}. Last developer joined <b><time datetime="{{ .LastDevCreatedAt }}">{{ .LastDevCreatedAtHumanized }}</time></b></h2>
+    <div style="margin-bottom: 10px;">
+        <div class="container" style="margin-bottom: 30px;">
+            <div id="search-tag-container">
+                <label for="search-tag"><b>Skills</b></label>
+                <input autocomplete="off" type="text" value="{{ .TagFilter }}" placeholder="Skills" id="search-tag" name="search-tag">
+                <div style="z-index:1000;display:none;" id="search-tag-suggestions" class="search-suggestions"></div>
+            </div>
+            <div id="search-location-container">
+                <label for="search-location"><b>Location</b></label>
+                <input autocomplete="off" type="text" value="{{ .LocationFilter }}" placeholder="City, Country" id="search-location" name="search-location">
+                <div id="search-location-suggestions" style="display:none;" class="search-suggestions"></div>
+            </div>
+        </div>
+        {{ if or .IsUserRecruiter .IsUserAdmin }}
+            <form id="recruiter-filters">
+                <fieldset class="container">
+                    <fieldset style="grid-column: span 2; margin-bottom: 10px;">
+                        <legend><b>Hourly Rate</b></legend>
+                        <div class="field-group">
+                            <input style="border: 1px solid #d9d9d9;" type="number" name="hourlyMin" id="hourlyMin" value="{{ if .RecruiterFilters.HourlyMin }}{{ .RecruiterFilters.HourlyMin }}{{ end }}" placeholder="Minimum Rate USD/hr">
+                        </div>
+                        <div class="field-group">
+                            <input style="border: 1px solid #d9d9d9;" type="number" name="hourlyMax" id="hourlyMax" value="{{ if .RecruiterFilters.HourlyMax }}{{ .RecruiterFilters.HourlyMax }}{{ end }}" placeholder="Maximum Rate USD/hr">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><b>Experience level</b></legend>
+                        {{ range $v, $l := .DeveloperRoleLevels }}
+                        <div class="checkbox-list-item">
+                            <input type="checkbox" name="roleLevel" id="roleLevel[{{ .Id }}]" value="{{ .Id }}" {{ if index $.RecruiterFilters.RoleLevels .Id }}checked{{ end }} />
+                            <label for="roleLevel[{{ .Id }}]">{{ .Label }}</label>
+                        </div>
+                        {{ end }}
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><b>Work preference</b></legend>
+                        {{ range $v, $l := .DeveloperRoleTypes }}
+                        <div class="checkbox-list-item">
+                            <input type="checkbox" name="roleType" id="roleType[{{ .Id }}]" value="{{ .Id }}" {{ if index $.RecruiterFilters.RoleTypes .Id }}checked{{ end }} />
+                            <label for="roleType[{{ .Id }}]">{{ .Label }}</label>
+                        </div>
+                        {{ end }}
+                    </fieldset>
+                </fieldset>
+            </form>
+        {{ end }}
+        <div>
+            <input type="submit" value="Search" id="search-btn">
+        </div>
+       	<div class="mobile-only">
+            <div style="width:100%; text-align: center;margin-top: 20px;margin-bottom: 10px;">Looking for a {{ .SiteJobCategory }} Job?</div>
+            <input type="submit" class="mobile-only" value="Join the Community" id="post-btn-mobile" onclick="window.location.href='/Join-{{ .SiteJobCategoryURLEncoded }}-Community';">  
+        </div>
+    </div>
+    <div class="overlay-effect" id="overlay-0" onclick="closeApplyPopup();"></div>
+    {{ if .DevelopersBannerLink }}
+    <article style="padding: 10px; text-align: center;">
+        <div><a href="{{ .DevelopersBannerLink }}" target="_blank" style="font-weight: bold;">💎 {{ .DevelopersBannerText }}</a></div>
+    </article>{{ end }}
+
+    <article class="apply-box" id="apply-box-recruiter">
+	{{ if .LoggedUser }}
+    <h3 id="apply-box-title" style="margin-top: 10px;">Send a Message to <span id="message-to"></span></h3>
+	<div id="apply-box-container-new-recruiter">
+	<p id="profile-info"></p>
+        <input type="hidden" name="profile-id" id="profile-id" value="0">
+        <input type="text" name="company-email" id="company-email" placeholder="Your Email" style="width: 100%;" value="{{ .LoggedUser.Email }}" disabled><br>
+	<textarea name="message-content" id="message-content" placeholder="Your Message" style="width: 100%;resize:none;"></textarea><br>
+        <br>
+        <br>
+        <input type="submit" id="apply-submit" value="Send" onclick="hitSend();" style="float: right;">
+	</div>
+    {{ else }}
+    <h3 id="apply-box-title-new-recruiter-profile" style="margin-top: 10px;">Create your recruiter profile to message <span id="message-to"></span></h3>
+	<div id="apply-box-container-new-recruiter-link">
+	<p id="profile-info-new-profile-link"></p>
+        <input type="hidden" name="profile-id" id="profile-id" value="0">
+        <p>You can create a profile on {{ .SiteName }} and contact {{ .SiteJobCategory }} Developers for hire.</p>
+        <br>
+        <br>
+        <input type="submit" id="apply-submit-new-profile" value="Create Profile" onclick="window.location.href='/Hire-From-{{ .SiteJobCategoryURLEncoded }}-Community';" style="float: right;">
+	</div>
+    {{ end }}
+    </article>
+    {{ template "apply-box-developer" . }}
+          {{ if .ComplementaryRemote }}
+	  <small><b>No {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Developers</b> found in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }} &bull; Showing {{ len .Developers }} of {{ .TotalDevelopersCount }} {{ if .TagFilter }}<b>{{ .TagFilter }}</b> {{ else }}{{ .SiteJobCategory }} {{ end }}Developers for hire available <b>Remotely</b> &bull; Sort by <b>Last Updated</b></small><br>
+	  {{ else }}
+	  <small>{{ len .Developers }} of {{ .TotalDevelopersCount }} {{ if .TagFilter }}<b>{{ .TagFilter }}</b> {{ else }}{{ .SiteJobCategory }} {{ end }}Developers for hire found {{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}&bull; Sort by <b>Last Updated</b></small><br>
+	  {{ end }}
+    <div class="container">
+        {{ $isLoggedUser := .LoggedUser }}
+        {{ $isUserAdmin := .IsUserAdmin }}
+        {{ $isUserRecruiter := .IsUserRecruiter }}
+	    {{ range $i, $j := .Developers }}
+              <article class="line-item">
+                <h2 style="margin-top:10px;">
+                    <img {{ if not $isLoggedUser }}style="filter:blur(5px);" onclick="sendMessage('{{ .ID }}', '{{ truncateName .Name }}');" class="job-icon hover-pointer"{{ else }}class="job-icon"{{ end }} loading="lazy" width="120" height="120" src="/x/s/m/{{ .ImageID }}?w=100&h=100" alt="{{ .Name }}" title="{{ .Name }}">
+                </h2>
+                  <div style="float: left;">
+			  <a href="/developer/{{ .Slug }}" target="_blank"><b>{{ if $isLoggedUser }}{{ .Name }}{{ else }}{{ truncateName .Name }}{{ end }}</b></a><br>
+              <small>{{ if .Available }}<span style="display: inline-block; width: 10px; height: 10px; background: #00ab6f; border-radius: 10px; margin-right: 5px;"></span>Currently Available{{ else }}<span style="display: inline-block; width: 10px; height: 10px; background: #ab3300; border-radius: 10px; margin-right: 5px;"></span>Currently Unavailable{{ end }}</small><br>
+		  <b id="location-{{ .ID }}">{{ .Location }}</b><br>
+          <small>{{ if or $isUserRecruiter $isUserAdmin }}{{ if ne .HourlyRate 0 }}Hourly Rate <b>{{ .HourlyRate }} USD/hour</b>{{ else }}Hourly Rate <b>Not specified</b>{{ end }}{{ end }}</small><br>
+          <small>Experience Level: <b>{{ stringTitle .RoleLevel }}</b></small><br>
+          <small>Work Preference: <b>{{ .RoleTypeAsString }}</b></small><br>
+		  <span id="skills-{{ .ID }}">
+		  {{ range $x, $y := .SkillsArray }}
+		  	<span style="display: inline-block;margin-top:10px;background: #dbdbdb;font-size:medium;padding: 4px 10px;border-radius:5px;">{{ $y }}</span>
+		  {{ end }}
+		  </span>
+                  <br>
+		  <br>
+		  <div class="overflow"><p {{ if not $isLoggedUser }}style="filter:blur(5px);" class="hover-pointer" onclick="sendMessage('{{ .ID }}', '{{ .Name }}');"{{ end }}>{{ .Bio }}</p></div>
+		  <br>
+		  <small>Last Updated {{ .UpdatedAtHumanized }}</small><br>
+                  </div>
+		  <input class="send-message" type="submit" {{ if not .Available }}disabled {{ else }}onclick="sendMessage('{{ .ID }}', '{{ .Name }}');" {{ end }}value="Send Message">
+                <div class="clearfix"></div>
+              </article>
+	      {{ end }}
+	      </div>
+          {{ if not .LoggedUser }}
+          <article class="line-item" id="email-subscribe-banner" style="margin-top:10px;">
+		  <h2 style="width: 50%;font-size:15pt;text-align:center;font-weight:bold;display:table;margin:5px auto 20px auto;" id="email-subscribe-item-text">Get a weekly email with all new {{ .SiteJobCategory }} jobs</h2>
+                <input type="email" name="job-email-subscription" id="job-email-subscription" style="width:50%;margin:10px auto;display:table;border: 1px solid #d9d9d9;" placeholder="Your Email">
+		<input type="submit" onclick="subscribe()" id="email-subscribe-item-btn" value="Join {{ .EmailSubscribersCount }}+ others" style="width:50%;display:table;margin:5px auto;">
+            </article>
+          {{ end }}
+          {{ if .ComplementaryRemote }}
+	  <small><b>No {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Developers</b> found in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }} &bull; Showing {{ len .Developers }} of {{ .TotalDevelopersCount }} {{ if .TagFilter }}<b>{{ .TagFilter }}</b> {{ else }}{{ .SiteJobCategory }} {{ end }}Developers for hire available <b>Remotely</b> &bull; Sort by <b>Last Updated</b></small><br>
+	  {{ else }}
+	  <small>{{ len .Developers }} of {{ .TotalDevelopersCount }} {{ if .TagFilter }}<b>{{ .TagFilter }}</b> {{ else }}{{ .SiteJobCategory }} {{ end }}Developers for hire found {{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}&bull; Sort by <b>Last Updated</b></small><br>
+	  {{ end }}
+            <br>
+            <nav>
+              <ul>
+                  {{ $cur := .CurrentPage }}
+                  {{ $numPages := len .PageIndexes }}
+                  {{ $moreThanOnePage := gt $numPages 1 }}
+                  {{ $thisIsNotFirstPage := ne $cur 1 }}
+                  {{ $prevPage := sub $cur 1 }}
+                  {{ if and $thisIsNotFirstPage $moreThanOnePage }}
+                        <li><a href="?p={{ $prevPage }}"><b>Prev</b></a></li>
+                  {{ end }}
+                  {{ range $p := .PageIndexes }}
+                    {{ if eq $cur $p }}
+                        <li><b>{{ $p }}</b></li>
+                    {{ else }}
+                        <li><a href="?p={{ $p }}"><b>{{ $p }}</b></a></li>
+                    {{ end }}
+                  {{ end }}
+                  {{ $lastPage := last .PageIndexes }}
+                  {{ $thisIsNotLastPage := ne $cur $lastPage }}
+                  {{ $nextPage := add $cur 1 }}
+                  {{ if and $thisIsNotLastPage $moreThanOnePage }}
+                        <li><a href="?p={{ $nextPage }}"><b>Next</b></a></li>
+                  {{ end }}
+                  {{ if eq $numPages 0 }}
+                    <li><a href="?p=1"><b>1</b></a></li>
+                  {{ end }}
+              </ul>
+            </nav>
+  </section>
+  <footer>
+	  <h4 style="margin-left: 9px;">Get Hired{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Region }}, {{ .Region }}{{ end }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}</h4>
+    <nav class="subnav" style="width:100%;">
+        <ul>
+		<li><a href="/Join-{{ .SiteJobCategoryURLEncoded }}-Community">Join the {{ .SiteJobCategory }} Developers Community</a></li>
+        </ul>
+    </nav>
+    <h4 style="margin-left: 9px;">Related To {{ .SiteJobCategory }}{{ if .TagFilter }} {{ .TagFilter }}{{ end }} Developers{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Region }}, {{ .Region }}{{ end }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}</h4>
+    	<nav class="subnav">
+        	<ul>
+			<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-{{ if .LocationFilter }}{{ .LocationURLEncoded }}{{ else }}Remote{{ end }}">Average Salary For {{ .SiteJobCategory }} Developers{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}</a></li>
+			<li><a href="/Companies-Using-{{ .SiteJobCategory }}{{ if .LocationFilter }}-In-{{ .LocationURLEncoded }}{{ end }}">Companies Hiring {{ .SiteJobCategory }}{{ if .TagFilter }} {{ .TagFilter }}{{ end }} Developers{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}</a></li>
+			<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Jobs-{{ if .LocationFilter }}In-{{ .LocationURLEncoded }}{{ else }}-Remote{{ end }}">{{ .SiteJobCategory }} Jobs {{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}</a></li>
+        	</ul>
+    	</nav>
+	<h4 style="margin-left: 9px;">{{ .SiteJobCategory }}{{ if .TagFilter }} {{ .TagFilter }}{{ end }} Developers{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Region }}, {{ .Region }}{{ end }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }} Related Searches</h4>
+    <nav class="subnav">
+        <ul>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-DevOps-Developers">{{ .SiteJobCategory }} DevOps Developers</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-GCP-Developers">{{ .SiteJobCategory }} GCP Developers</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-AWS-Developers">{{ .SiteJobCategory }} AWS Developers</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-SRE-Developers">{{ .SiteJobCategory }} SRE Developers</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-K8s-Developers">{{ .SiteJobCategory }} K8s Developers</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-MySQL-Developers">{{ .SiteJobCategory }} MySQL Developers</a></li>
+        </ul>
+    </nav>
+    <nav class="subnav">
+        <ul>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers-In-United%20Kingdom">{{ .SiteJobCategory }} Developers in United Kingdom</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers-In-Germany">{{ .SiteJobCategory }} Developers in Germany</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers-In-Netherlands">{{ .SiteJobCategory }} Developers in Netherlands</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers-In-United%20States">{{ .SiteJobCategory }} Developers in United States</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers-In-India">{{ .SiteJobCategory }} Developers in India</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers-In-Europe">{{ .SiteJobCategory }} Developers in Europe</a></li>
+        </ul>
+    </nav>
+    <h4 style="margin-left: 9px;">Explore {{ .SiteJobCategory }} Developer Salary Data</h4>
+    <nav class="subnav">
+        <ul>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Remote">{{ .SiteJobCategory }} Developer Salary Remote</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-London">{{ .SiteJobCategory }} Developer Salary London</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Berlin">{{ .SiteJobCategory }} Developer Salary Berlin</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Amsterdam">{{ .SiteJobCategory }} Developer Salary Amsterdam</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-New%20York">{{ .SiteJobCategory }} Developer Salary New York</a></li>
+		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Vancouver">{{ .SiteJobCategory }} Developer Salary Vancouver</a></li>
+        </ul>
+    </nav>
+    <h4 style="margin-left: 9px;">{{ .SiteName }}</h4>
+    <nav class="subnav">
+        <ul>
+            <li><a href="/">Jobs</a></li>
+	    <li><a target="_blank" href="https://twitter.com/{{ .SiteTwitter }}">{{ .SiteName }} on Twitter</a></li>
+	    <li><a target="_blank" href="https://github.com/{{ .SiteGithub }}">{{ .SiteName }} on GitHub</a></li>
+	    <li><a target="_blank" href="https://www.youtube.com/channel/UCq4YrlwwXwF74Z3g-VDae2w">{{ .SiteName }} YouTube Channel</a></li>
+	    <li><a href="/rss">{{ .SiteName }} RSS Feed</a></li>
+            <li><a href="/support">Support</a></li>
+	    <li><a href="/about">About {{ .SiteName }}</a></li>
+            <li><a href="/terms-of-service">T&Cs</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+        </ul>
+	</nav>
+  </footer>
+    <script>
+        function isEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+        var get = function(uri, cb) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', uri, true);
+            xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+            xhr.send();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    cb(xhr.status === 200);
+                }
+            }
+        };
+        var getJSON = function(uri, cb) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', uri, true);
+            xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+            xhr.send();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    cb(xhr.status, JSON.parse(xhr.responseText));
+                }
+            }
+        };
+        var post = function(uri, body, cb) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', uri, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify(body));
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    cb(xhr.status);
+                }
+            }
+        }
+        function sendMessage(profileID, profileName) {
+            document.getElementById('profile-id').value = profileID;
+            document.getElementById('message-to').innerHTML = profileName;
+	        document.getElementById('profile-info').innerHTML = 'Current Location <b>'+document.getElementById('location-'+profileID).innerHTML+'</b><br>'+document.getElementById('skills-'+profileID).innerHTML;
+            document.getElementById('apply-box-recruiter').style.display = 'block';
+            document.getElementById('overlay-0').style.display = 'block';
+        }
+        function showPopup() {
+            document.getElementById('apply-box-developer').style.display = 'block';
+            document.getElementById('overlay-0').style.display = 'block';
+        }
+        function hitSend() {
+            var email = document.getElementById('company-email').value;
+            var content = document.getElementById('message-content').value;
+	    var profileID = document.getElementById('profile-id').value;
+            if (!isEmail(email)) {
+                alert('Please provide a valid email address');
+                return;
+            }
+	    post('/x/smdp/'+profileID, {email: email, content: content}, function(status) {
+                closeApplyPopup();
+                if (status == 200) {
+                    alert('Message sent.');
+		    document.getElementById('message-content').value = "";
+                    return;
+                }
+                if (status == 422) {
+                    alert('Links are not allowed for security reasons in the first message. Please remove links to send your message');
+                    return;
+                }
+                alert('There was an error while sending your message. Please try again later');
+            });
+        }
+        function closeApplyPopup() {
+            document.getElementById('apply-box-recruiter').style.display = 'none';
+            document.getElementById('apply-box-developer').style.display = 'none';
+            document.getElementById('overlay-0').style.display = 'none';
+        }
+    document
+        .getElementById('search-location')
+        .addEventListener('keyup', function(event) {
+            event.preventDefault();
+            {{ if not .LoggedUser }}
+            showPopup();
+            return;
+            {{ end }}
+            if (event.keyCode !== 13) {
+		document.getElementById('search-location-suggestions').style.display = 'none';
+		getJSON('/x/loc/autocomplete?k='+document.getElementById('search-location').value.trim(), function(status, res) {
+			if (status == 200 && typeof res != 'undefined') {
+				var suggestions = '';
+				for (var item of res) {
+					var display = item.name;
+					if (item.country) {
+						display+=', '+item.country;
+					}
+					display+=' '+item.emoji;
+					suggestions += '<div class="search-option" id="loc-option-'+item.name+'" data-val="'+item.name+'">'+display+'</div>';
+				}
+				if (suggestions != '') {
+				  document.getElementById('search-location-suggestions').innerHTML = suggestions;
+				  for (var item of res) {
+					document.getElementById('loc-option-'+item.name).addEventListener('click', function(e) {
+						document.getElementById('search-location').value = e.target.getAttribute('data-val');
+						document.getElementById('search-location-suggestions').style.display = 'none';
+					});
+				  }
+				  document.getElementById('search-location-suggestions').style.display = 'block';
+				}
+			}
+		})
+                return;
+            }
+            if (document.getElementById('search-location').value.trim() === '' && document.getElementById('search-tag').value.trim() === '') {
+				window.location.href = '/{{ .SiteJobCategoryURLEncoded }}-Developers';
+            } else if (document.getElementById('search-location').value.trim() !== '' && document.getElementById('search-tag').value.trim() === '') {
+				window.location.href = '/{{ .SiteJobCategoryURLEncoded }}-Developers-In-'+encodeURIComponent(document.getElementById('search-location').value);
+            } else if (document.getElementById('search-location').value.trim() === '' && document.getElementById('search-tag').value.trim() !== '') {
+				window.location.href = '/{{ .SiteJobCategoryURLEncoded }}-'+encodeURIComponent(document.getElementById('search-tag').value)+'-Developers';
+            } else {
+				window.location.href = '/{{ .SiteJobCategoryURLEncoded }}-'+encodeURIComponent(document.getElementById('search-tag').value)+'-Developers-In-'+encodeURIComponent(document.getElementById('search-location').value);
+            }
+        });
+    document
+        .getElementById('search-tag')
+        .addEventListener('keyup', function(event) {
+            event.preventDefault();
+            {{ if not .LoggedUser }}
+            showPopup();
+            return;
+            {{ end }}
+            if (event.keyCode != 13) {
+		document.getElementById('search-tag-suggestions').style.display = 'none';
+		getJSON('/x/skill/autocomplete?k='+document.getElementById('search-tag').value.trim(), function(status, res) {
+			if (status == 200 && typeof res != 'undefined') {
+				var suggestions = '';
+				for (var item of res) {
+					suggestions += '<div class="search-option" id="tag-option-'+item.name+'" data-val="'+item.name+'">'+item.name+'</div>';
+				}
+				if (suggestions != '') {
+				  document.getElementById('search-tag-suggestions').innerHTML = suggestions;
+				  for (var item of res) {
+					document.getElementById('tag-option-'+item.name).addEventListener('click', function(e) {
+						document.getElementById('search-tag').value = e.target.outerText;
+						document.getElementById('search-tag-suggestions').style.display = 'none';
+					});
+				  }
+				  document.getElementById('search-tag-suggestions').style.display = 'block';
+				}
+			}
+		})
+                return;
+            }
+            if (document.getElementById('search-location').value.trim() === '' && document.getElementById('search-tag').value.trim() === '') {
+				window.location.href = '/{{ .SiteJobCategoryURLEncoded }}-Developers';
+            } else if (document.getElementById('search-location').value.trim() !== '' && document.getElementById('search-tag').value.trim() === '') {
+				window.location.href = '/{{ .SiteJobCategoryURLEncoded }}-Developers-In-'+encodeURIComponent(document.getElementById('search-location').value);
+            } else if (document.getElementById('search-location').value.trim() === '' && document.getElementById('search-tag').value.trim() !== '') {
+				window.location.href = '/{{ .SiteJobCategoryURLEncoded }}-'+encodeURIComponent(document.getElementById('search-tag').value)+'-Developers';
+            } else {
+				window.location.href = '/{{ .SiteJobCategoryURLEncoded }}-'+encodeURIComponent(document.getElementById('search-tag').value)+'-Developers-In-'+encodeURIComponent(document.getElementById('search-location').value);
+            }
+        });
+    document
+        .getElementById('search-btn')
+        .addEventListener('click', function() {
+            {{ if not .LoggedUser }}
+            showPopup();
+            return;
+            {{ end }}
+            let newLocation;
+            
+            if (document.getElementById('search-location').value.trim() === '' && document.getElementById('search-tag').value.trim() === '') {
+				newLocation = '/{{ .SiteJobCategoryURLEncoded }}-Developers';
+            } else if (document.getElementById('search-location').value.trim() !== '' && document.getElementById('search-tag').value.trim() === '') {
+				newLocation = '/{{ .SiteJobCategoryURLEncoded }}-Developers-In-'+encodeURIComponent(document.getElementById('search-location').value);
+            } else if (document.getElementById('search-location').value.trim() === '' && document.getElementById('search-tag').value.trim() !== '') {
+				newLocation = '/{{ .SiteJobCategoryURLEncoded }}-'+encodeURIComponent(document.getElementById('search-tag').value)+'-Developers';
+            } else {
+				newLocation = '/{{ .SiteJobCategoryURLEncoded }}-'+encodeURIComponent(document.getElementById('search-tag').value)+'-Developers-In-'+encodeURIComponent(document.getElementById('search-location').value);
+            }
+
+            const recruiterFiltersForm = document.getElementById("recruiter-filters");
+            if (recruiterFiltersForm) {
+                const recruiterFiltersData = new FormData(recruiterFiltersForm);
+                const roleTypes = recruiterFiltersData.getAll('roleType');
+                const roleLevels = recruiterFiltersData.getAll('roleLevel');
+
+                // Go doesn't like repeated query params, so we'll turn them into CSVs
+                if (roleTypes.length > 0) {
+                    recruiterFiltersData.set('roleType', roleTypes.join(','));
+                }
+                
+                if (roleLevels.length > 0) {
+                    recruiterFiltersData.set('roleLevel', roleLevels.join(','));
+                }
+
+                newLocation += '?' + new URLSearchParams(recruiterFiltersData);
+            }
+
+            window.location.href = newLocation
+        });
+        {{ if not .LoggedUser }}
+        window.addEventListener("scroll", function() {
+            var y = window.scrollY;
+            if (y >= 800) {
+                showPopup();
+            }
+        });
+        {{ end }}
+    function hideEmailBanner() {
+        document.getElementById('email-subscribe-banner').style.display = 'none';
+	    document.getElementById('newsletter-banner').style.display = 'none';
+    }
+    function subscribe() {
+        var email = document.getElementById('job-email-subscription').value;
+        if (!isEmail(email)) {
+            alert('Please enter a valid email address!');
+            return;
+        }
+        get('/x/email/subscribe?email='+encodeURIComponent(email), function(success) {
+            if (success) {
+		hideEmailBanner();
+                alert('Thanks for subscribing!');
+                document.getElementById('job-email-subscription').value = '';
+            } else {
+                alert('Oops, there was an error with your subscription!');
+            }
+        });
+    }
+        function empty() {
+            var isThere = true;
+            for (var i = 0; i < arguments.length; i++) {
+                isThere &= typeof arguments[i] === "undefined" ? false : arguments[i].trim() !== "";
+            }
+            return !isThere;
+        };
+    </script>
+    {{ template "newsletter-banner-js" . }}
+</body>
+</html>

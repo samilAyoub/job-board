@@ -1,0 +1,3 @@
+Contact: mailto:__support_email_placeholder__
+Preferred-Languages: en
+Canonical: https://__host_placeholder__/.well-known/security.txt
