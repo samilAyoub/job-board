@@ -300,39 +300,42 @@ body{background:#ffffff;}
         	<ul>
 			<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-{{ if .LocationFilter }}{{ .LocationURLEncoded }}{{ else }}Remote{{ end }}">Average Salary For {{ .SiteJobCategory }} Developers{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}</a></li>
 			<li><a href="/Companies-Using-{{ .SiteJobCategory }}{{ if .LocationFilter }}-In-{{ .LocationURLEncoded }}{{ end }}">Companies Hiring {{ .SiteJobCategory }}{{ if .TagFilter }} {{ .TagFilter }}{{ end }} Developers{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}</a></li>
-			<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Jobs-{{ if .LocationFilter }}In-{{ .LocationURLEncoded }}{{ else }}-Remote{{ end }}">{{ .SiteJobCategory }} Jobs {{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}</a></li>
+			<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Jobs-{{ if .LocationFilter }}In-{{ .LocationURLEncoded }}{{ else }}-Remote{{ end }}">{{ .SiteJobCategory }} developer jobs {{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}</a></li>
         	</ul>
     	</nav>
 	<h4 style="margin-left: 9px;">{{ .SiteJobCategory }}{{ if .TagFilter }} {{ .TagFilter }}{{ end }} Developers{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Region }}, {{ .Region }}{{ end }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }} Related Searches</h4>
     <nav class="subnav">
         <ul>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-DevOps-Developers">{{ .SiteJobCategory }} DevOps Developers</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-GCP-Developers">{{ .SiteJobCategory }} GCP Developers</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-AWS-Developers">{{ .SiteJobCategory }} AWS Developers</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-SRE-Developers">{{ .SiteJobCategory }} SRE Developers</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-K8s-Developers">{{ .SiteJobCategory }} K8s Developers</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-MySQL-Developers">{{ .SiteJobCategory }} MySQL Developers</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Full-Stack-Developer-Jobs">{{ .SiteJobCategory }} Full Stack Developer Jobs</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Backend-Developer-Jobs">{{ .SiteJobCategory }} Backend Developer Jobs</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Associate-Developer-Jobs">{{ .SiteJobCategory }} Associate Developer Jobs</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Core-Developer-Jobs">{{ .SiteJobCategory }} Core Developer Jobs</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Mid-Level-Developer-Jobs">{{ .SiteJobCategory }} Mid level Developer Jobs</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Senior-Developer-Jobs">{{ .SiteJobCategory }} Senior Developer Jobs</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Junior-Developer-Jobs">{{ .SiteJobCategory }} Junior Developer Jobs</a></li>
         </ul>
     </nav>
     <nav class="subnav">
         <ul>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers-In-United%20Kingdom">{{ .SiteJobCategory }} Developers in United Kingdom</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers-In-Germany">{{ .SiteJobCategory }} Developers in Germany</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers-In-Netherlands">{{ .SiteJobCategory }} Developers in Netherlands</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers-In-United%20States">{{ .SiteJobCategory }} Developers in United States</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers-In-India">{{ .SiteJobCategory }} Developers in India</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers-In-Europe">{{ .SiteJobCategory }} Developers in Europe</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Jobs-In-United-Kingdom">{{ .SiteJobCategory }} developer jobs in United Kingdom</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Jobs-In-Germany">{{ .SiteJobCategory }} developer jobs in Germany</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Jobs-In-Netherlands">{{ .SiteJobCategory }} developer jobs in Netherlands</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Jobs-In-United%20States">{{ .SiteJobCategory }} developer jobs in United States</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Jobs-In-Spain">{{ .SiteJobCategory }} developer jobs in Spain</a></li>
+            <li><a href="/{{ .SiteJobCategoryURLEncoded }}-Jobs-In-France">{{ .SiteJobCategory }} developer jobs in France</a></li>
         </ul>
     </nav>
     <h4 style="margin-left: 9px;">Explore {{ .SiteJobCategory }} Developer Salary Data</h4>
     <nav class="subnav">
         <ul>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Remote">{{ .SiteJobCategory }} Developer Salary Remote</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-London">{{ .SiteJobCategory }} Developer Salary London</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Berlin">{{ .SiteJobCategory }} Developer Salary Berlin</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Amsterdam">{{ .SiteJobCategory }} Developer Salary Amsterdam</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-New%20York">{{ .SiteJobCategory }} Developer Salary New York</a></li>
-		<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Vancouver">{{ .SiteJobCategory }} Developer Salary Vancouver</a></li>
+            <li><a target="_blank" href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Remote">{{ .SiteJobCategory }} Developer Salary Remote</a></li>
+            <li><a target="_blank" href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Senior">Senior {{ .SiteJobCategory }} Developer Salary</a target="_blank"></li>
+            <li><a target="_blank" href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Full-Stack">Full Stack {{ .SiteJobCategory }} Developer Salary</a></li>
+            <li><a target="_blank" href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Entry-Level">Entry Level {{ .SiteJobCategory }} Developer Salary</a></li>
+            <li><a target="_blank" href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-New%20York">{{ .SiteJobCategory }} Developer Salary New York</a></li>
+            <li><a target="_blank" href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Washington">{{ .SiteJobCategory }} Developer Salary Washington</a></li>
+            <li><a target="_blank" href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Salary-Dallas">{{ .SiteJobCategory }} Developer Salary Dallas</a></li>
+
         </ul>
     </nav>
     <h4 style="margin-left: 9px;">{{ .SiteName }}</h4>

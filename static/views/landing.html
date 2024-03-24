@@ -884,12 +884,12 @@
 			{{ if $isRemote }}
 		<h1 class="main-title">Remote {{ if .TagFilter }}{{ .TagFilter }} {{ else }}{{ .SiteJobCategory }} {{ end }}Jobs{{ if .SalaryFilter }} Paying {{ humannumber .SalaryFilter }} {{ .CurrencyFilter }} a Year {{ end }}
 		</h1><br>
-		<b style="font-size:12pt;">Hand-Picked {{ .SiteJobCategory }} jobs &bull; Apply directly to companies &bull;
+		<b style="font-size:12pt;">Hand-Picked {{ .SiteJobCategory }} developer jobs &bull; Apply directly to companies &bull;
 			Clear salary ranges</b>
 		<h2 style="font-size:12pt;font-weight:100;margin-top:20px">Browse <b>{{ .TextJobCount }} 🌎 Remote {{ .SiteJobCategory }}{{ if .TagFilter }} {{ .TagFilter }}{{ end }} Jobs{{ if .NewJobsLastMonth }} ({{ if .NewJobsLastWeek }}{{ .NewJobsLastWeek }} new this week{{ else }}{{ .NewJobsLastMonth }} new this month{{ end }}){{ end }}</b> in {{ .MonthAndYear }} {{ if .TextCompanies }}at companies like <b>{{ .TextCompanies }}</b>{{ if .SalaryFilter }} paying at least {{ humannumber .SalaryFilter }} {{ .CurrencyFilter }} per year{{ else }}{{ if .HasSalaryInfo }} with salaries from <b>{{ .MinSalary }} to {{ .MaxSalary }}</b>{{ end }}{{ end }} working as a <b>{{ .TextJobTitles }}</b>.{{ end }} Last post <time datetime="{{ .LastJobPostedAt }}">{{ .LastJobPostedAtHumanized }}</time></h2>
 		{{ else }}
 		<h1 class="main-title">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }}{{ end }} Jobs {{ if .LocationFilter }}in {{ .LocationFilter }}{{ end }}{{ if .SalaryFilter }} Paying {{ humannumber .SalaryFilter }} {{ .CurrencyFilter }} a Year{{ end }}</h1><br>
-		<b style="font-size:12pt;">Hand-Picked {{ .SiteJobCategory }} jobs &bull; Apply directly to companies &bull;
+		<b style="font-size:12pt;">Hand-Picked {{ .SiteJobCategory }} developer jobs &bull; Apply directly to companies &bull;
 			Clear salary ranges</b>
 		<h2 style="font-size:12pt;font-weight:100;margin-top:20px">Browse <b>{{ .TextJobCount }} {{ .SiteJobCategory }}{{ if .TagFilter }} {{ .TagFilter }}{{ end }} Jobs{{ if .NewJobsLastMonth }} ({{ if .NewJobsLastWeek }}{{ .NewJobsLastWeek }} new this week{{ else }}{{ .NewJobsLastMonth }} new this month{{ end }}){{ end }}</b>{{ if not .ComplementaryRemote }}{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}{{ end }}{{ if .LocationEmojiFromDB }} {{ .LocationEmojiFromDB }}{{ end }} in {{ .MonthAndYear }} {{ if .TextCompanies }}at companies like <b>{{ .TextCompanies }}</b>{{ if .SalaryFilter }} paying at least {{ humannumber .SalaryFilter }} {{ .CurrencyFilter }} per year{{ else }}{{ if .HasSalaryInfo }} with salaries from <b>{{ .MinSalary }} to {{ .MaxSalary }}</b>{{ end }}{{ end }} working as a <b>{{ .TextJobTitles }}</b>.{{ end }} Last post <time datetime="{{ .LastJobPostedAt }}">{{ .LastJobPostedAtHumanized }}</time></h2>
 		{{ end }}
@@ -1165,13 +1165,13 @@
 			Related Searches</h4>
 		<nav class="subnav">
 			<ul>
-				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Software-Developer-Jobs">Remote {{ .SiteJobCategory }} Software Development Jobs</a></li>
-				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Hardware-Developer-Jobs">Remote {{ .SiteJobCategory }} Hardware Development Jobs</a></li>
-				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Product-Manager-Jobs">Remote {{ .SiteJobCategory }} Management Jobs</a></li>
-				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Design-Jobs">Remote {{ .SiteJobCategory }} Design Jobs</a></li>
-				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Mixed-Reality-Jobs">Remote {{ .SiteJobCategory }}, and Mixed Reality Jobs</a></li>
-				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Senior-Jobs">Remote {{ .SiteJobCategory }} Senior Jobs</a></li>
-				<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Junior-Jobs">{{ .SiteJobCategory }} Junior Jobs</a></li>
+				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Full-Stack-Developer-Jobs">Remote {{ .SiteJobCategory }} Full Stack Developer Jobs</a></li>
+				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Backend-Developer-Jobs">Remote {{ .SiteJobCategory }} Backend Developer Jobs</a></li>
+				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Associate-Developer-Jobs">Remote {{ .SiteJobCategory }} Associate Developer Jobs</a></li>
+				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Core-Developer-Jobs">Remote {{ .SiteJobCategory }} Core Developer Jobs</a></li>
+				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Mid-Level-Developer-Jobs">Remote {{ .SiteJobCategory }} Mid level Developer Jobs</a></li>
+				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Senior-Developer-Jobs">Remote {{ .SiteJobCategory }} Senior Developer Jobs</a></li>
+				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Junior-Developer-Jobs">Remote {{ .SiteJobCategory }} Junior Developer Jobs</a></li>
 			</ul>
 		</nav>
 		{{ else }}
@@ -1179,22 +1179,22 @@
 		<nav class="subnav">
 			<ul>
 				<li><a
-						href="/{{ .SiteJobCategoryURLEncoded }}-Software-Developer-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Software Development Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
+						href="/{{ .SiteJobCategoryURLEncoded }}-Developer-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Developer Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
 				<li><a
-						href="/{{ .SiteJobCategoryURLEncoded }}-Hardware-Developer-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Hardware Development Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
+						href="/{{ .SiteJobCategoryURLEncoded }}-Full-Stack-Developer-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Full Stack Developer Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
 				<li><a
-						href="/{{ .SiteJobCategoryURLEncoded }}-Management-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Management Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
+						href="/{{ .SiteJobCategoryURLEncoded }}-Backend-Developer-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Backend Developer Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
 				<li><a
-						href="/{{ .SiteJobCategoryURLEncoded }}-Design-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Design Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
+						href="/{{ .SiteJobCategoryURLEncoded }}-Associate-Developer-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Associate Developer Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
 				<li><a
-						href="/{{ .SiteJobCategoryURLEncoded }}-Mixed-Reality-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }}, and Mixed Reality Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
+						href="/{{ .SiteJobCategoryURLEncoded }}-Core-Developer-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Core Developer Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
 				<li><a
-						href="/{{ .SiteJobCategoryURLEncoded }}-Sound-Effects-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Sound Effects Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
+						href="/{{ .SiteJobCategoryURLEncoded }}-Mid-Level-Developer-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Mid Level Developer  Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
 				<li><a
-						href="/{{ .SiteJobCategoryURLEncoded }}-Senior-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Senior Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
+						href="/{{ .SiteJobCategoryURLEncoded }}-Senior Developer-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Senior Developer Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
 				<li><a
-						href="/{{ .SiteJobCategoryURLEncoded }}-Junior-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Junior Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
-				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Jobs">Remote {{ .SiteJobCategory }} Jobs</a></li>
+						href="/{{ .SiteJobCategoryURLEncoded }}-Junior-Developer-Jobs{{ if .LocationFilter }}-In-{{ .LocationFilterURLEnc }}{{ end }}">{{ .SiteJobCategory }} Junior Developer Jobs{{ if .LocationFilter }} in {{ .LocationFilterWithCountry }}{{ end }}</a></li>
+				<li><a href="/Remote-{{ .SiteJobCategoryURLEncoded }}-Jobs">Remote {{ .SiteJobCategory }} developer jobs</a></li>
 			</ul>
 		</nav>
 		{{ end }}
@@ -1243,13 +1243,19 @@
 				<li><a
 						href="/{{ .SiteJobCategoryURLEncoded }}-{{ if .TagFilter }}{{ .TagFilterURLEnc }}-{{ end }}Jobs-In-Germany">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Jobs in Germany</a></li>
 				<li><a
-						href="/{{ .SiteJobCategoryURLEncoded }}{{ if .TagFilter }}{{ .TagFilterURLEnc }}-{{ end }}-Jobs-In-Netherlands">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Jobs in Netherlands</a></li>
+						href="/{{ .SiteJobCategoryURLEncoded }}-{{ if .TagFilter }}{{ .TagFilterURLEnc }}-{{ end }}Jobs-In-Netherlands">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Jobs in Netherlands</a></li>
 				<li><a
-						href="/{{ .SiteJobCategoryURLEncoded }}{{ if .TagFilter }}{{ .TagFilterURLEnc }}-{{ end }}-Jobs-In-Canada">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Jobs in Canada</a></li>
+						href="/{{ .SiteJobCategoryURLEncoded }}-{{ if .TagFilter }}{{ .TagFilterURLEnc }}-{{ end }}Jobs-In-Canada">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Jobs in Canada</a></li>
 				<li><a
-						href="/{{ .SiteJobCategoryURLEncoded }}{{ if .TagFilter }}{{ .TagFilterURLEnc }}-{{ end }}-Jobs-In-Australia">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Jobs in Australia</a></li>
+						href="/{{ .SiteJobCategoryURLEncoded }}-{{ if .TagFilter }}{{ .TagFilterURLEnc }}-{{ end }}Jobs-In-Australia">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Jobs in Australia</a></li>
 				<li><a
-						href="/{{ .SiteJobCategoryURLEncoded }}{{ if .TagFilter }}{{ .TagFilterURLEnc }}-{{ end }}-Jobs-In-Switzerland">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Jobs in Switzerland</a></li>
+						href="/{{ .SiteJobCategoryURLEncoded }}-{{ if .TagFilter }}{{ .TagFilterURLEnc }}-{{ end }}Jobs-In-Switzerland">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Jobs in Switzerland</a></li>
+				<li><a
+						href="/{{ .SiteJobCategoryURLEncoded }}-{{ if .TagFilter }}{{ .TagFilterURLEnc }}-{{ end }}Jobs-In-Singapore">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Jobs in Singapore</a></li>
+				<li><a
+						href="/{{ .SiteJobCategoryURLEncoded }}-{{ if .TagFilter }}{{ .TagFilterURLEnc }}-{{ end }}Jobs-In-USA">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Jobs in USA</a></li>
+				<li><a
+						href="/{{ .SiteJobCategoryURLEncoded }}-{{ if .TagFilter }}{{ .TagFilterURLEnc }}-{{ end }}Jobs-In-US">{{ .SiteJobCategory }} {{ if .TagFilter }}{{ .TagFilter }} {{ end }}Jobs in US</a></li>
 			</ul>
 		</nav>
 		<h4 style="margin-left: 9px;">{{ .SiteJobCategory }} Developer Salaries Related Searches</h4>

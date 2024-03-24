@@ -1060,7 +1060,7 @@ func TriggerWeeklyNewsletter(svr server.Server, jobRepo *job.Repository) http.Ha
 // 						email.Address{Name: svr.GetEmail().DefaultSenderName(), Email: svr.GetEmail().NoReplySenderAddress()},
 // 						email.Address{Email: s.Email},
 // 						email.Address{Name: svr.GetEmail().DefaultSenderName(), Email: svr.GetEmail().NoReplySenderAddress()},
-// 						fmt.Sprintf("Go Jobs This Week (%d New)", len(jobPosts)),
+// 						fmt.Sprintf("Java Jobs This Week (%d New)", len(jobPosts)),
 // 						campaignContentHTML+fmt.Sprintf(unsubscribeLink, s.Email, s.Token),
 // 					)
 // 					if err != nil {

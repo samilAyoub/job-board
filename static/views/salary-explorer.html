@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
 		<meta name="title" content="{{ .SiteJobCategory }} Developer Salary {{ .Location }}{{ if .Country }}, {{ .Country }}{{ end }} - {{ .MonthAndYear }}">
-		<meta name="keywords" content="{{ .SiteJobCategory }}, {{ .SiteJobCategory }} salary, ar/vr Developer salary, ar/vr Developer Salary, {{ .SiteJobCategory }} Software Developer Salary {{ .Location }}{{ if .Country }}, {{ .Country }}{{ end }} in {{ .MonthAndYear }}, ar/vr Developer salary {{ .Location }}{{ if .Country }}, {{ .Country }}{{ end }}, {{ .SiteJobCategory }} salary {{ .Location }}{{ if .Country }}, {{ .Country }}{{ end }}, ar/vr salary {{ .Location }}{{ if .Country }}, {{ .Country }}{{ end }}">
+		<meta name="keywords" content="{{ .SiteJobCategory }}, {{ .SiteJobCategory }} salary, Java Developer salary, Java Developer Salary, {{ .SiteJobCategory }} Software Developer Salary {{ .Location }}{{ if .Country }}, {{ .Country }}{{ end }} in {{ .MonthAndYear }}, Java Developer salary {{ .Location }}{{ if .Country }}, {{ .Country }}{{ end }}, {{ .SiteJobCategory }} salary {{ .Location }}{{ if .Country }}, {{ .Country }}{{ end }}, Java salary {{ .Location }}{{ if .Country }}, {{ .Country }}{{ end }}">
 		<meta name="description" content="{{ .SiteJobCategory }} Developer Salary {{ .Location }}{{ if .Region }}, {{ .Region }}{{ end }}{{ if .Country }}, {{ .Country }}{{ end }} in {{ .MonthAndYear }}">
     <meta itemprop="name" content="{{ .SiteJobCategory }} Developer Salary {{ .Location }}{{ if .Country }}, {{ .Country }}{{ end }} - {{ .MonthAndYear }}">
     <meta itemprop="description" content="{{ .SiteJobCategory }} Developer Salary {{ .Location }}{{ if .Region }}, {{ .Region }}{{ end }}{{ if .Country }}, {{ .Country }}{{ end }} in {{ .MonthAndYear }}">
@@ -442,7 +442,7 @@ section {padding: 0 10px;}
         	<ul>
 			<li><a href="/Companies-Using-{{ .SiteJobCategoryURLEncoded }}{{ if .Location }}-In-{{ .LocationURLEncoded }}{{ end }}">Companies Hiring {{ .SiteJobCategory }} Developers{{ if .Location }} in {{ .Location }}{{ end }}</a></li>
 			<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Developers{{ if .Location }}-In-{{ .LocationURLEncoded }}{{ end }}">{{ .SiteJobCategory }} Developers{{ if .Location }} in {{ .Location }}{{ end }}</a></li>
-			<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Jobs-{{ if .Location }}In-{{ .LocationURLEncoded }}{{ else }}-Remote{{ end }}">{{ .SiteJobCategory }} Jobs {{ if .Location }} in {{ .Location }}{{ end }}</a></li>
+			<li><a href="/{{ .SiteJobCategoryURLEncoded }}-Jobs-{{ if .Location }}In-{{ .LocationURLEncoded }}{{ else }}-Remote{{ end }}">{{ .SiteJobCategory }} developer jobs {{ if .Location }} in {{ .Location }}{{ end }}</a></li>
         	</ul>
     	</nav>
 	<h4 style="margin-left: 9px;">{{ .SiteJobCategory }} Developer Salary Worldwide</h4>
@@ -506,62 +506,59 @@ var svg = d3.select("#salary-distribution")
 // get the data
 var data = JSON.parse("{{ .DataSet }}");
 
-  // add the x Axis
-  var x = d3.scaleLinear()
-            .domain([{{ .Min }}, {{ .Max }}])
-            .range([0, width]);
-  svg.append("g")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x))
-      .selectAll("text")
-        .style("text-anchor", "end")
-        .attr("dx", "-.8em")
-        .attr("dy", ".15em")
-        .attr("transform", "rotate(-65)");
+// Add the x Axis
+var x = d3.scaleLinear()
+    .domain([
+        d3.min(data, d => Math.min(d.min, d.max)),
+        d3.max(data, d => Math.max(d.min, d.max))
+    ])
+    .range([0, width]);
 
-  // add the y Axis
-  var y = d3.scaleLinear()
-            .range([height, 0])
-            .domain([0, 0.05]);
+svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
 
-  // Compute kernel density estimation
-  var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(30))
-  var density =  kde( data.map(function(d){  return d.min; }) )
+// Add the y Axis
+var y = d3.scaleLinear()
+    .range([height, 0])
+    .domain([0, 0.05]);
+svg.append("g")
+    .call(d3.axisLeft(y));
 
-  // Plot the area
-  svg.append("path")
-      .attr("class", "mypath")
-      .datum(density)
-      .attr("fill", "#69b3a2")
-      .attr("opacity", ".8")
-      .attr("stroke", "#000")
-      .attr("stroke-width", 1)
-      .attr("stroke-linejoin", "round")
-      .attr("d",  d3.line()
-        .curve(d3.curveBasis)
-          .x(function(d) { return x(d[0]); })
-          .y(function(d) { return y(d[1]); })
-      );
+// Compute kernel density estimation for min values
+var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(30));
+var densityMin =  kde(data.map(function(d){ return d.min; }));
 
-  // Compute kernel density estimation
-  var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(30))
-  var density =  kde( data.map(function(d){  return d.max; }) )
+// Compute kernel density estimation for max values
+var densityMax =  kde(data.map(function(d){ return d.max; }));
 
-  // Plot the area
-  svg.append("path")
-      .attr("class", "mypath")
-      .datum(density)
-      .attr("fill", "#6900a2")
-      .attr("opacity", ".8")
-      .attr("stroke", "#000")
-      .attr("stroke-width", 1)
-      .attr("stroke-linejoin", "round")
-      .attr("d",  d3.line()
-        .curve(d3.curveBasis)
-          .x(function(d) { return x(d[0]); })
-          .y(function(d) { return y(d[1]); })
-      );
+// Plot the area for min values
+svg.append("path")
+    .datum(densityMin)
+    .attr("fill", "#69b3a2")
+    .attr("opacity", ".8")
+    .attr("stroke", "#000")
+    .attr("stroke-width", 1)
+    .attr("stroke-linejoin", "round")
+    .attr("d",  d3.line()
+      .curve(d3.curveBasis)
+        .x(function(d) { return x(d[0]); })
+        .y(function(d) { return y(d[1]); })
+    );
 
+// Plot the area for max values
+svg.append("path")
+    .datum(densityMax)
+    .attr("fill", "#6900a2")
+    .attr("opacity", ".8")
+    .attr("stroke", "#000")
+    .attr("stroke-width", 1)
+    .attr("stroke-linejoin", "round")
+    .attr("d",  d3.line()
+      .curve(d3.curveBasis)
+        .x(function(d) { return x(d[0]); })
+        .y(function(d) { return y(d[1]); })
+    );
 // Function to compute density
 function kernelDensityEstimator(kernel, X) {
   return function(V) {
@@ -715,7 +712,6 @@ var dataTrendsRaw = JSON.parse("{{ .DataSetTrends }}");
 var parseDate = d3.timeParse("%Y-%m-%d")
 
 var dataTrends = dataTrendsRaw.map(function (d) {
-  console.log(d);
     return {
       date:  parseDate(d.date),
       p10: d.p10,

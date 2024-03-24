@@ -27,7 +27,7 @@ body{background:#ffffff;}
     </style>
     <meta charset="utf-8">
     <meta name="title" content="{{ .Job.JobTitle }} at {{ .Job.Company }} | {{ .Job.Location }}">
-    <meta name="keywords" content="{{ .SiteJobCategory }}, {{ .SiteJobCategory }} jobs, {{ .SiteJobCategory }} programming language, {{ .Job.JobTitle }}, {{ .Job.Company }}">
+    <meta name="keywords" content="{{ .SiteJobCategory }}, {{ .SiteJobCategory }} developer jobs, {{ .SiteJobCategory }} programming language, {{ .Job.JobTitle }}, {{ .Job.Company }}">
     <meta name="description" content="{{ .SiteJobCategory }} Developer Jobs | {{ .Job.JobTitle }} at {{ .Job.Company }} | {{ .Job.Location }}">
     <meta itemprop="name" content="{{ .Job.JobTitle }} at {{ .Job.Company }} | {{ .Job.Location }}">
     <meta itemprop="description" content="{{ .SiteJobCategory }} Developer Jobs | {{ .Job.JobTitle }} at {{ .Job.Company }} | {{ .Job.Location }}">
@@ -97,7 +97,7 @@ body{background:#ffffff;}
                     <p style="text-align:center;font-size:10pt;">*All options are a one-time payment and are not subscriptions.</p>
 
                     <article style="padding:20px 10px;width: 28%;height: auto;margin-right:5%;float:left;">
-                        <h2 style="margin-top:0;text-align:center;">Basic Option</h2>
+                        <h2 style="margin-top:0;text-align:center;">Basic</h2>
                         <input type="hidden" id="plan-1-item-price" value="{{ .Plan1IDPrice }}">
                         <input type="hidden" id="plan-1-total-price" value="{{ .Plan1IDPrice }}">
                         <input type="hidden" id="plan-1-live-days-base" value="30">
@@ -113,7 +113,7 @@ body{background:#ffffff;}
                         </ul>
                     </article>
                     <article style="padding:20px 10px;width: 28%;height: auto;margin-right:5%;float:left;">
-                        <h2 style="margin-top:0;text-align:center;">Pro Option</h2>
+                        <h2 style="margin-top:0;text-align:center;">Pro</h2>
                         <input type="hidden" id="plan-2-item-price" value="{{ .Plan2IDPrice }}">
                         <input type="hidden" id="plan-2-total-price" value="{{ .Plan2IDPrice }}">
                         <input type="hidden" id="plan-2-featured-days-base" value="14">
@@ -131,7 +131,7 @@ body{background:#ffffff;}
                         </ul>
                     </article>
                     <article style="padding:20px 10px;width: 28%;height: auto;margin-right:5%;float:left;">
-                        <h2 style="margin-top:0;text-align:center;">Platinum Option</h2>
+                        <h2 style="margin-top:0;text-align:center;">Platinum</h2>
                         <input type="hidden" id="plan-3-item-price" value="{{ .Plan3IDPrice }}">
                         <input type="hidden" id="plan-3-total-price" value="{{ .Plan3IDPrice }}">
                         <input type="hidden" id="plan-3-featured-days-base" value="30">
@@ -499,7 +499,7 @@ body{background:#ffffff;}
             var howToApply = document.getElementById("how-to-apply").value;
             var companyEmail = document.getElementById("company-email").value;
             if (empty(jobTitle, jobLocation, salaryMin, salaryMax, companyName, companyWebsite, jobDescription, howToApply, companyEmail)) {
-                alert('You must fill all the mandatory forms in order to Hire AR/VR Developers');
+                alert('You must fill all the mandatory forms in order to Hire Java Developers');
                 return;
             }
             if (!isInteger(salaryMax) || !isInteger(salaryMin)) {

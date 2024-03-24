@@ -6,7 +6,7 @@ This is the first Go job board with no recruiters & clear salary ranges.
 - No third party recruiters (apply directly to companies)
 - All jobs are manually vetted and reviewed
 - Browse salary trends by region
-- Browse companies hiring AR/VR developers and using Go in production
+- Browse companies hiring Java Developers and using Java in production
 - Browse Go developers
 - Weekly Job Newsletter Digest
 - Open Source

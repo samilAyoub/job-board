@@ -104,59 +104,59 @@ func main() {
 
 	svr.RegisterRoute("/", handler.IndexPageHandler(svr, jobRepo, devRepo, bookmarkRepo), []string{"GET"})
 	svr.RegisterRoute(
-		fmt.Sprintf("/Companies-Using-%s", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Companies-Using-%s", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.CompaniesHandler(svr, companyRepo, jobRepo, devRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/Remote-Companies-Using-%s", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Remote-Companies-Using-%s", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.CompaniesForLocationHandler(svr, companyRepo, jobRepo, devRepo, "Remote"),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/Companies-Using-%s-In-{location}", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Companies-Using-%s-In-{location}", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.CompaniesHandler(svr, companyRepo, jobRepo, devRepo),
 		[]string{"GET"},
 	)
 
 	// developers pages
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-Developers", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-Developers", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.DevelopersHandler(svr, devRepo, recRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-Developers-In-{location}", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-Developers-In-{location}", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.DevelopersHandler(svr, devRepo, recRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-{tag}-Developers", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-{tag}-Developers", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.DevelopersHandler(svr, devRepo, recRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-{tag}-Developers-In-{location}", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-{tag}-Developers-In-{location}", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.DevelopersHandler(svr, devRepo, recRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
 		"/Submit-Developer-Profile",
-		handler.PermanentRedirectHandler(svr, fmt.Sprintf("/Join-%s-Community", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1)))),
+		handler.PermanentRedirectHandler(svr, fmt.Sprintf("/Join-%s-Community", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-"))),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
 		"/community",
-		handler.PermanentRedirectHandler(svr, fmt.Sprintf("/Join-%s-Community", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1)))),
+		handler.PermanentRedirectHandler(svr, fmt.Sprintf("/Join-%s-Community", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-"))),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/Join-%s-Community", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Join-%s-Community", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.SubmitDeveloperProfileHandler(svr, devRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/Hire-From-%s-Community", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Hire-From-%s-Community", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.SubmitRecruiterProfileHandler(svr, devRepo),
 		[]string{"GET"},
 	)
@@ -310,7 +310,7 @@ func main() {
 	)
 	svr.RegisterRoute(
 		"/Remote-Jobs",
-		handler.PermanentRedirectHandler(svr, fmt.Sprintf("/Remote-%s-Jobs", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1)))),
+		handler.PermanentRedirectHandler(svr, fmt.Sprintf("/Remote-%s-Jobs", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-"))),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
@@ -339,132 +339,132 @@ func main() {
 
 	// Remote Landing Page No Skill
 	svr.RegisterRoute(
-		fmt.Sprintf("/Remote-%s-Jobs", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Remote-%s-Jobs", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForLocationHandler(svr, jobRepo, devRepo, bookmarkRepo, "Remote"),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/Remote-%s-Jobs-Paying-{salary}-{currency}-year", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Remote-%s-Jobs-Paying-{salary}-{currency}-year", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForLocationHandler(svr, jobRepo, devRepo, bookmarkRepo, "Remote"),
 		[]string{"GET"},
 	)
 
 	// Salary Only Landing Page
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-Jobs-Paying-{salary}-{currency}-year", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-Jobs-Paying-{salary}-{currency}-year", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.IndexPageHandler(svr, jobRepo, devRepo, bookmarkRepo),
 		[]string{"GET"},
 	)
 
 	// Remote Landing Page Skill
 	svr.RegisterRoute(
-		fmt.Sprintf("/Remote-%s-{skill}-Jobs", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Remote-%s-{skill}-Jobs", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForLocationAndSkillPlaceholderHandler(svr, jobRepo, devRepo, bookmarkRepo, "Remote"),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/Remote-%s-{skill}-Jobs-Paying-{salary}-{currency}-year", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Remote-%s-{skill}-Jobs-Paying-{salary}-{currency}-year", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForLocationAndSkillPlaceholderHandler(svr, jobRepo, devRepo, bookmarkRepo, "Remote"),
 		[]string{"GET"},
 	)
 
 	// Location Only Landing Page
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-Jobs-In-{location}-Paying-{salary}-{currency}-year", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-Jobs-In-{location}-Paying-{salary}-{currency}-year", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForLocationPlaceholderHandler(svr, jobRepo, devRepo, bookmarkRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-Jobs-in-{location}-Paying-{salary}-{currency}-year", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-Jobs-in-{location}-Paying-{salary}-{currency}-year", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForLocationPlaceholderHandler(svr, jobRepo, devRepo, bookmarkRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-Jobs-In-{location}", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-Jobs-In-{location}", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForLocationPlaceholderHandler(svr, jobRepo, devRepo, bookmarkRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-Jobs-in-{location}", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-Jobs-in-{location}", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForLocationPlaceholderHandler(svr, jobRepo, devRepo, bookmarkRepo),
 		[]string{"GET"},
 	)
 
 	// Skill Only Landing Page
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-{skill}-Jobs", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-{skill}-Jobs", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForSkillPlaceholderHandler(svr, jobRepo, devRepo, bookmarkRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-{skill}-Jobs-Paying-{salary}-{currency}-year", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-{skill}-Jobs-Paying-{salary}-{currency}-year", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForSkillPlaceholderHandler(svr, jobRepo, devRepo, bookmarkRepo),
 		[]string{"GET"},
 	)
 
 	// Skill And Location Landing Page
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-{skill}-Jobs-In-{location}-Paying-{salary}-{currency}-year", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-{skill}-Jobs-In-{location}-Paying-{salary}-{currency}-year", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForSkillAndLocationPlaceholderHandler(svr, jobRepo, devRepo, bookmarkRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-{skill}-Jobs-in-{location}-Paying-{salary}-{currency}-year", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-{skill}-Jobs-in-{location}-Paying-{salary}-{currency}-year", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForSkillAndLocationPlaceholderHandler(svr, jobRepo, devRepo, bookmarkRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-{skill}-Jobs-In-{location}", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-{skill}-Jobs-In-{location}", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForSkillAndLocationPlaceholderHandler(svr, jobRepo, devRepo, bookmarkRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-{skill}-Jobs-in-{location}", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-{skill}-Jobs-in-{location}", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.LandingPageForSkillAndLocationPlaceholderHandler(svr, jobRepo, devRepo, bookmarkRepo),
 		[]string{"GET"},
 	)
 
 	// Salary for location
 	svr.RegisterRoute(
-		fmt.Sprintf("/%s-Developer-Salary-{location}", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/%s-Developer-Salary-{location}", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.SalaryLandingPageLocationPlaceholderHandler(svr, jobRepo, devRepo),
 		[]string{"GET"},
 	)
 	// Salary for remote
 	svr.RegisterRoute(
-		fmt.Sprintf("/Remote-%s-Developer-Salary", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Remote-%s-Developer-Salary", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.SalaryLandingPageLocationHandler(svr, jobRepo, devRepo, "Remote"),
 		[]string{"GET"},
 	)
 
 	// hire developers pages
 	svr.RegisterRoute(
-		fmt.Sprintf("/Hire-%s-Developers", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Hire-%s-Developers", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.PostAJobPageHandler(svr, companyRepo, jobRepo),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
 		fmt.Sprintf("/hire-%s-developers", cfg.SiteJobCategory),
-		handler.PermanentRedirectHandler(svr, fmt.Sprintf("Hire-%s-Developers", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1)))),
+		handler.PermanentRedirectHandler(svr, fmt.Sprintf("Hire-%s-Developers", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-"))),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
 		"/post-a-job",
-		handler.PermanentRedirectHandler(svr, fmt.Sprintf("Hire-%s-Developers", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1)))),
+		handler.PermanentRedirectHandler(svr, fmt.Sprintf("Hire-%s-Developers", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-"))),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
 		"/ad",
-		handler.PermanentRedirectHandler(svr, fmt.Sprintf("Hire-%s-Developers", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1)))),
+		handler.PermanentRedirectHandler(svr, fmt.Sprintf("Hire-%s-Developers", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-"))),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/Hire-Remote-%s-Developers", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Hire-Remote-%s-Developers", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.PostAJobForLocationPageHandler(svr, companyRepo, jobRepo, "Remote"),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/Hire-%s-Developers-In-{location}", strings.Title(strings.Replace(cfg.SiteJobCategory, " ", "-", -1))),
+		fmt.Sprintf("/Hire-%s-Developers-In-{location}", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
 		handler.PostAJobForLocationFromURLPageHandler(svr, companyRepo, jobRepo),
 		[]string{"GET"},
 	)

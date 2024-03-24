@@ -681,7 +681,7 @@ func (s Server) RenderPageForDevelopers(w http.ResponseWriter, r *http.Request, 
 	}
 	loc, err := database.GetLocation(s.Conn, location)
 	if err != nil && location != "" {
-		s.Redirect(w, r, http.StatusFound, fmt.Sprintf("/%s-Developers", strings.Title(s.GetConfig().SiteJobCategory)))
+		s.Redirect(w, r, http.StatusFound, fmt.Sprintf("/%s-Developers", strings.ReplaceAll(strings.Title(strings.ToLower(s.GetConfig().SiteJobCategory)), " ", "-")))
 		return
 	}
 	topDevelopers, err := devRepo.GetTopDevelopers(10)
