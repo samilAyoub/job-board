@@ -789,7 +789,7 @@
     <section style="padding: 10px;">
         <article>
             <h1 style="margin-top:0;">Login to your {{ .SiteName }} account</h1>
-            <p style="margin-top: 20px;">Use your account email to receive a sign-in token. If you haven't registered already you can <a href="/Join-{{ .SiteJobCategoryURLEncoded }}-Community">sign-up for free</a></p>
+            <p style="margin-top: 20px;">Use your account email to receive a sign-in token. If you haven't registered already you can <a href="/Join-{{ .SiteJobCategoryURLEncoded }}-Community" style="color: blue; text-decoration: underline; cursor: pointer;">sign-up for free</a></p>
                 <div style="width: 100%;">
                 <input type="email" name="email" id="email" {{ if .DefaultEmail }}value="{{ .DefaultEmail }}"{{ end }} class="email-subscribe-item"
                     style="border: 1px solid #d9d9d9;margin:10px auto;display:block;width:300px;" placeholder="Email Address">
