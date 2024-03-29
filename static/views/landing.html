@@ -5,7 +5,7 @@
 	{{ $locationNotSet := not .LocationFilter }}
 	{{ $tagFilterNotSet := not .TagFilter }}
 	{{ if and .LocationFilter $isRemote }}
-	<title>Remote {{ .SiteJobCategory }} {{ if .TagFilter }}{{.TagFilter}} {{ end }}Jobs{{ if .SalaryFilter}} Paying {{ humannumber .SalaryFilter }} {{ .CurrencyFilter }} a Year{{ end }} in {{ .MonthAndYear }} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} | {{ .SiteName }}</title>
+	<title>Remote {{ .SiteJobCategory }} {{ if .TagFilter }}{{.TagFilter}} {{ end }}Developer Jobs{{ if .SalaryFilter}} Paying {{ humannumber .SalaryFilter }} {{ .CurrencyFilter }} a Year{{ end }} in {{ .MonthAndYear }} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} | {{ .SiteName }}</title>
 	<link href="/x/s/m/{{ .SiteLogoImageID }}?w=50&h=50" rel="icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="title"
