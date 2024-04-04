@@ -28,7 +28,7 @@
 		<link href="/x/s/m/{{ .SiteLogoImageID }}?w=50&h=50" rel="shortcut icon">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="title" content="Companies using {{ .SiteJobCategory }}{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }} in {{ .MonthAndYear }} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} | {{ .SiteName }}">
-		<meta name="keywords" content="{{ .SiteJobCategory }}{{ if .LocationFilter }}, {{ .SiteJobCategory }} companies in {{ .LocationFilter}} {{ end }}, companies using go, companies using {{ .SiteJobCategory }}, {{ .SiteJobCategory }} companies">
+		<meta name="keywords" content="{{ .SiteJobCategory }}{{ if .LocationFilter }}, {{ .SiteJobCategory }} companies in {{ .LocationFilter}} {{ end }}, companies using java, companies using {{ .SiteJobCategory }}, {{ .SiteJobCategory }} companies">
 		<meta name="description" content="{{ .SiteJobCategory }} Companies using {{ .SiteJobCategory }} in production and hiring Java Developers{{ if .LocationFilter }} in {{ .LocationFilter }}{{ if .Region }}, {{ .Region }}{{ end }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }} in {{ .MonthAndYear }}">
 		<meta itemprop="name" content="Companies using {{ .SiteJobCategory }}{{ if .LocationFilter }} in {{ .LocationFilter }}{{ end }} in {{ .MonthAndYear }} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} | {{ .SiteName }}">
 		<meta itemprop="description" content="Companies Using {{ .SiteJobCategory }} in production and hiring Java Developers{{ if .LocationFilter }} in {{.LocationFilter}}{{ if .Region }}, {{ .Region }}{{ if .Country }}, {{ .Country }}{{ end }}{{ end }}{{ end }} in {{ .MonthAndYear }} {{ if .ShowPage }} - Page {{ .CurrentPage }} {{ end }} | {{ .SiteName }}">
@@ -257,8 +257,6 @@ a:hover{cursor:pointer;}.main-title{font-weight: bold;margin: 0 0 auto;width:80%
         <ul>
             <li><a href="/">Jobs</a></li>
 	    <li><a target="_blank" rel="noopener" href="https://twitter.com/{{ .SiteTwitter }}">{{ .SiteName }} on Twitter</a></li>
-	    <li><a target="_blank" rel="noopener" href="https://github.com/{{ .SiteGithub }}">{{ .SiteName }} on GitHub</a></li>
-	    <li><a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCq4YrlwwXwF74Z3g-VDae2w">{{ .SiteName }} YouTube Channel</a></li>
 	    <li><a href="/rss">{{ .SiteName }} RSS Feed</a></li>
             <li><a href="/support">Support</a></li>
 	    <li><a href="/about">About {{ .SiteName }}</a></li>

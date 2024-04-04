@@ -4,8 +4,6 @@ INSERT INTO image (id, bytes, media_type) VALUES ('UYZ87782JNBHGSTRZ65', decode(
 -- SEO locatiion
 INSERT INTO seo_location (name, currency, country, emoji) VALUES 
 -- Canada and its cities
-('Switzerland', '₣', NULL, '🇨🇭'),
-('Canada', '$', NULL, '🇨🇦'),
 ('Toronto', '$', 'Canada', '🇨🇦'),
 ('Montreal', '$', 'Canada', '🇨🇦'),
 ('Vancouver', '$', 'Canada', '🇨🇦'),
@@ -14,9 +12,6 @@ INSERT INTO seo_location (name, currency, country, emoji) VALUES
 ('Ottawa', '$', 'Canada', '🇨🇦'),
 ('Winnipeg', '$', 'Canada', '🇨🇦'),
 -- United States and its cities
-('United States', '$', NULL, '🇺🇸'),
-('US', '$', NULL, '🇺🇸'),
-('USA', '$', NULL, '🇺🇸'),
 ('New York City', '$', 'United States', '🇺🇸'),
 ('Los Angeles', '$', 'United States', '🇺🇸'),
 ('Chicago', '$', 'United States', '🇺🇸'),
@@ -30,82 +25,70 @@ INSERT INTO seo_location (name, currency, country, emoji) VALUES
 ('Austin', '$', 'United States', '🇺🇸'),
 ('Boston', '$', 'United States', '🇺🇸'),
 -- United Kingdom
-('United Kingdom', '£', NULL, '🇬🇧'),
 ('London', '£', 'United Kingdom', '🇬🇧'),
 ('Birmingham', '£', 'United Kingdom', '🇬🇧'),
 ('Manchester', '£', 'United Kingdom', '🇬🇧'),
 ('Glasgow', '£', 'United Kingdom', '🇬🇧'),
 ('Liverpool', '£', 'United Kingdom', '🇬🇧'),
 -- Germany
-('Germany', '€', NULL, '🇩🇪'),
 ('Berlin', '€', 'Germany', '🇩🇪'),
 ('Hamburg', '€', 'Germany', '🇩🇪'),
 ('Munich', '€', 'Germany', '🇩🇪'),
 ('Cologne', '€', 'Germany', '🇩🇪'),
 ('Frankfurt', '€', 'Germany', '🇩🇪'),
 -- France
-('France', '€', NULL, '🇫🇷'),
 ('Paris', '€', 'France', '🇫🇷'),
 ('Marseille', '€', 'France', '🇫🇷'),
 ('Lyon', '€', 'France', '🇫🇷'),
 ('Toulouse', '€', 'France', '🇫🇷'),
 ('Nice', '€', 'France', '🇫🇷'),
 -- Italy
-('Italy', '€', NULL, '🇮🇹'),
 ('Rome', '€', 'Italy', '🇮🇹'),
 ('Milan', '€', 'Italy', '🇮🇹'),
 ('Naples', '€', 'Italy', '🇮🇹'),
 ('Turin', '€', 'Italy', '🇮🇹'),
 ('Palermo', '€', 'Italy', '🇮🇹'),
 -- Spain
-('Spain', '€', NULL, '🇪🇸'),
 ('Madrid', '€', 'Spain', '🇪🇸'),
 ('Barcelona', '€', 'Spain', '🇪🇸'),
 ('Valencia', '€', 'Spain', '🇪🇸'),
 ('Seville', '€', 'Spain', '🇪🇸'),
 ('Zaragoza', '€', 'Spain', '🇪🇸'),
 -- Netherlands
-('Netherlands', '€', NULL, '🇳🇱'),
 ('Amsterdam', '€', 'Netherlands', '🇳🇱'),
 ('Rotterdam', '€', 'Netherlands', '🇳🇱'),
 ('The Hague', '€', 'Netherlands', '🇳🇱'),
 ('Utrecht', '€', 'Netherlands', '🇳🇱'),
 ('Eindhoven', '€', 'Netherlands', '🇳🇱'),
 -- Belgium
-('Belgium', '€', NULL, '🇧🇪'),
 ('Brussels', '€', 'Belgium', '🇧🇪'),
 ('Antwerp', '€', 'Belgium', '🇧🇪'),
 ('Ghent', '€', 'Belgium', '🇧🇪'),
 ('Charleroi', '€', 'Belgium', '🇧🇪'),
 ('Liège', '€', 'Belgium', '🇧🇪'),
 -- Sweden
-('Sweden', 'kr', NULL, '🇸🇪'),
 ('Stockholm', 'kr', 'Sweden', '🇸🇪'),
 ('Gothenburg', 'kr', 'Sweden', '🇸🇪'),
 ('Malmö', 'kr', 'Sweden', '🇸🇪'),
 ('Uppsala', 'kr', 'Sweden', '🇸🇪'),
 ('Västerås', 'kr', 'Sweden', '🇸🇪'),
 -- Norway
-('Norway', 'kr', NULL, '🇳🇴'),
 ('Oslo', 'kr', 'Norway', '🇳🇴'),
 ('Bergen', 'kr', 'Norway', '🇳🇴'),
 ('Trondheim', 'kr', 'Norway', '🇳🇴'),
 ('Stavanger', 'kr', 'Norway', '🇳🇴'),
 ('Drammen', 'kr', 'Norway', '🇳🇴'),
 -- Poland
-('Poland', 'zł', NULL, '🇵🇱'),
 ('Warsaw', 'zł', 'Poland', '🇵🇱'),
 ('Krakow', 'zł', 'Poland', '🇵🇱'),
 ('Łódź', 'zł', 'Poland', '🇵🇱'),
 ('Wrocław', 'zł', 'Poland', '🇵🇱'),
 ('Poznań', 'zł', 'Poland', '🇵🇱'),
 -- Israel (noted for its startup ecosystem)
-('Israel', '₪', NULL, '🇮🇱'),
 ('Tel Aviv', '₪', 'Israel', '🇮🇱'),
 ('Jerusalem', '₪', 'Israel', '🇮🇱'),
 ('Haifa', '₪', 'Israel', '🇮🇱'),
 -- South Korea (known for its IT and innovation)
-('South Korea', '₩', NULL, '🇰🇷'),
 ('Seoul', '₩', 'South Korea', '🇰🇷'),
 ('Busan', '₩', 'South Korea', '🇰🇷'),
 -- China (major cities known for tech industries)
@@ -116,12 +99,12 @@ INSERT INTO seo_location (name, currency, country, emoji) VALUES
 ('Bangalore', '₹', 'India', '🇮🇳'),
 ('Hyderabad', '₹', 'India', '🇮🇳'),
 -- Estonia (noted for its digital innovation)
-('Estonia', '€', NULL, '🇪🇪'),
 ('Tallinn', '€', 'Estonia', '🇪🇪'),
 -- Finland (Helsinki's tech ecosystem)
 ('Helsinki', '€', 'Finland', '🇫🇮'),
-('Near Me', '$' , NULL, '📍'),
 ('Remote', '$' , NULL, '🌎');
+('US', '$' , NULL, '🇺🇸');
+('USA', '$' , NULL, '🇺🇸');
 
 -- SEO Skills
 INSERT INTO seo_skill (name) VALUES 

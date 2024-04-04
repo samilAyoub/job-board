@@ -48,21 +48,15 @@ footer{padding:10px;width:780px;margin:auto;}.subnav{width: 100%;text-align: lef
 				Candidates speak directly to companies
 
 				<h3>{{ .SiteJobCategory }} only Job Ads</h3>
-				{{ .SiteName }} will be only for jobs where the main programming language is Go.
+				{{ .SiteName }} will be only for jobs where the main programming language is Java.
 
 				<h3>High-Quality Hand-Picked Jobs</h3>
 				All submitted jobs are manually reviewed and updated. All jobs that don't follow the standards above are not allowed on the platform.
 
-				<h3>Open Source</h3>
-				{{ .SiteName }} is <a href="https://github.com/{{ .SiteGithub }}" target="_blank" rel="noopener noreferrer">open source</a> and licensed under BSD 3-Clause. It's written entirely in <b><a href="https://golang.org" target="_blank" rel="noreferrer nofollow">Go</a>/HTML/CSS/JavaScript</b>.
-				As of today the app is using <a href="https://www.postgresql.org" target="_blank" rel="noreferrer nofollow">PostgreSQL</a> as primary data store and it's being hosted on <a href="https://m.do.co/c/1a2d92c7bce8" target="_blank" rel="noreferrer nofollow">DigitalOcean</a>.
-
 				<h3>{{ .SiteName }} Socials</h3>
 				<ul>
-					{{ if .SiteGithub }}<li><a href="https://github.com/{{ .SiteGithub }}" target="_blank" rel="noopener noreferrer">GitHub</a></li>{{ end }}
 					{{ if .SiteTwitter }}<li><a href="https://twitter.com/{{ .SiteTwitter }}" target="_blank" rel="noopener noreferrer">Twitter</a></li>{{ end }}
 					{{ if .SiteLinkedin }}<li><a href="https://linkedin.com/company/{{ .SiteLinkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>{{ end }}
-					{{ if .SiteYoutube }}<li><a href="https://youtube.com/c/{{ .SiteYoutube }}" target="_blank" rel="noopener noreferrer">YouTube</a></li>{{ end }}
 					{{ if .SiteTelegramChannel }}<li><a href="https://t.me/{{ .SiteTelegramChannel }}" target="_blank" rel="noopener noreferrer">Telegram</a></li>{{ end }}
 					<li><a href="https://{{ .SiteHost }}/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
 				</ul>
@@ -78,8 +72,6 @@ footer{padding:10px;width:780px;margin:auto;}.subnav{width: 100%;text-align: lef
 				<ul>
 					<li><a href="/">Jobs</a></li>
 					{{ if .SiteTwitter }}<li><a target="_blank" href="https://twitter.com/{{ .SiteTwitter }}">{{ .SiteName }} on Twitter</a></li>{{ end }}
-					{{ if .SiteGithub }}<li><a target="_blank" href="https://github.com/{{ .SiteGithub }}">{{ .SiteName }} on GitHub</a></li>{{ end }}
-					{{ if .SiteYoutube }}<li><a target="_blank" href="https://www.youtube.com/c/{{ .SiteYoutube }}">{{ .SiteName }} YouTube Channel</a></li>{{ end }}
 					<li><a href="/rss">{{ .SiteName }} RSS Feed</a></li>
 					<li><a href="/support">Support</a></li>
 					<li><a href="/about">About {{ .SiteName }}</a></li>

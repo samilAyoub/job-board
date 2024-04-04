@@ -142,16 +142,16 @@ func main() {
 	)
 	svr.RegisterRoute(
 		"/Submit-Developer-Profile",
-		handler.PermanentRedirectHandler(svr, fmt.Sprintf("/Join-%s-Community", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-"))),
+		handler.PermanentRedirectHandler(svr, fmt.Sprintf("/Join-%s-Community", strings.Title(cfg.SiteJobCategory))),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
 		"/community",
-		handler.PermanentRedirectHandler(svr, fmt.Sprintf("/Join-%s-Community", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-"))),
+		handler.PermanentRedirectHandler(svr, fmt.Sprintf("/Join-%s-Community", strings.Title(cfg.SiteJobCategory))),
 		[]string{"GET"},
 	)
 	svr.RegisterRoute(
-		fmt.Sprintf("/Join-%s-Community", strings.ReplaceAll(strings.Title(strings.ToLower(cfg.SiteJobCategory)), " ", "-")),
+		fmt.Sprintf("/Join-%s-Community", strings.Title(cfg.SiteJobCategory)),
 		handler.SubmitDeveloperProfileHandler(svr, devRepo),
 		[]string{"GET"},
 	)
